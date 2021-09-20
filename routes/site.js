@@ -5,7 +5,7 @@ var connectToDB = require('../db')
 
 sites.route('/').get(async function (req, res) {
   const dbConnect = await connectToDB();
-  console.log(dbConnect.db)
+  // console.log(dbConnect.db)
   dbConnect.db
     .collection("siteList")
     .find({}).limit(20)
