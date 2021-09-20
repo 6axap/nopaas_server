@@ -7,7 +7,7 @@ sites.route('/').get(async function (req, res) {
   const dbConnect = await connectToDB();
   // console.log(dbConnect.db)
   dbConnect.db
-    .collection("sites")
+    .collection("siteList")
     .find({}).limit(20)
     .toArray(function (err, result) {
     if (err) {
